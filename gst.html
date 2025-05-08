@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Calculator</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <!-- Google Fonts - Poppins (clean sans-serif font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-card">
+            <!-- Navigation Menu -->
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="percentage.html" class="nav-item">Percentage Calculator</a>
+                <a href="gst.html" class="nav-item active">GST Calculator</a>
+            </div>
+            
+            <h1>GST Calculator</h1>
+            
+            <div class="input-group" id="input-container">
+                <!-- Amount Input -->
+                <div class="input-field">
+                    <label for="amount">Amount (₹)</label>
+                    <input type="text" id="amount" placeholder="Enter amount">
+                    <div class="error-message" id="amount-error"></div>
+                </div>
+                
+                <!-- GST Rate Input -->
+                <div class="input-field">
+                    <label for="gst-rate">GST Rate (%)</label>
+                    <div class="gst-input-wrapper">
+                        <input type="text" id="gst-rate" placeholder="Enter GST rate">
+                        <div class="gst-presets">
+                            <button class="gst-preset-btn" data-rate="5">5%</button>
+                            <button class="gst-preset-btn" data-rate="12">12%</button>
+                            <button class="gst-preset-btn" data-rate="18">18%</button>
+                            <button class="gst-preset-btn" data-rate="28">28%</button>
+                        </div>
+                    </div>
+                    <div class="error-message" id="gst-rate-error"></div>
+                </div>
+            </div>
+            
+            <!-- GST Mode Toggle -->
+            <div class="mode-toggle-container">
+                <label class="mode-label">GST Mode:</label>
+                <div class="toggle-buttons">
+                    <button class="toggle-btn active" id="exclusive-btn">Exclusive</button>
+                    <button class="toggle-btn" id="inclusive-btn">Inclusive</button>
+                </div>
+            </div>
+            
+            <!-- Result Section -->
+            <div class="result-section">
+                <h2>Calculation Results</h2>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <div class="result-label">GST Amount:</div>
+                        <div class="result-value" id="gst-amount">₹0.00</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Total Price:</div>
+                        <div class="result-value" id="total-amount">₹0.00</div>
+                    </div>
+                </div>
+                <div class="result-display" id="result-summary" aria-live="polite">
+                    Enter values to calculate
+                </div>
+            </div>
+            
+            <!-- Reset Button -->
+            <button id="reset-btn" class="reset-button">
+                Reset
+                <span class="ripple"></span>
+            </button>
+        </div>
+    </div>
+    
+    <script src="static/js/gst_calculator.js"></script>
+</body>
+</html>

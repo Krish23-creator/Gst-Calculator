@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <!-- Google Fonts - Poppins (clean sans-serif font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-card">
+            <!-- Navigation Menu -->
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="percentage.html" class="nav-item active">Percentage Calculator</a>
+                <a href="gst.html" class="nav-item">GST Calculator</a>
+            </div>
+            
+            <h1>Percentage Calculator</h1>
+            
+            <div class="input-group" id="input-container">
+                <!-- Base Value Input -->
+                <div class="input-field">
+                    <label for="base-value">Base Value</label>
+                    <input type="text" id="base-value" placeholder="Enter base value">
+                    <div class="error-message" id="base-value-error"></div>
+                </div>
+                
+                <!-- Percentage Input -->
+                <div class="input-field">
+                    <label for="percentage">Percentage</label>
+                    <input type="text" id="percentage" placeholder="Enter percentage">
+                    <div class="error-message" id="percentage-error"></div>
+                </div>
+            </div>
+            
+            <!-- Result Section -->
+            <div class="result-section">
+                <h2>Result</h2>
+                <div class="result-display" id="result-value" aria-live="polite">
+                    Enter values to calculate
+                </div>
+            </div>
+            
+            <!-- Reset Button -->
+            <button id="reset-btn" class="reset-button">
+                Reset
+                <span class="ripple"></span>
+            </button>
+        </div>
+    </div>
+    
+    <script src="static/js/percentage_calculator.js"></script>
+</body>
+</html>
